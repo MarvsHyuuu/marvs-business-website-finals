@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="review.css" />
+    <link href="main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="product.css" />
+    <title>Canby ACTV</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b544d6355.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+  <body>
+    <div class="container" id="navbar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="Home-img/shwood-logo.png" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="Sunglasses.html"
+                  >Sunglasses</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Collection
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="Sunglasses.html"
+                      >Collection</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="ACTV-performace.html"
+                      >ACTV Performance</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="acetate-originals.html"
+                      >Acetate</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="wood-glasses.html">Wood</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="our_story.html">Our Story</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="our_process.html"
+                      >Our Process</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="product">
+        <div class="product-gallery">
+          <img
+            id="main-image"
+            src="canby-ACTV-img/emerald/1.jpg"
+            alt="Eyeglass Frames"
+          />
+          <div class="thumbnails" id="thumbnails"></div>
+        </div>
+        <div class="product-details">
+          <h1>Canby ACTV</h1>
+          <p class="price">$149</p>
+          <div id="review-product">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+            <a href="#product-review-section">222 reviews</a>
+          </div>
+          <p>Frame Color:</p>
+          <div class="frame-choices">
+            <button data-frame="emerald" class="frame-button">Emerald</button>
+            <button data-frame="matte-smoke" class="frame-button">
+              Matte Smoke
+            </button>
+          </div>
+          <button class="add-to-cart-btn">
+            <a href="sign-up.html">Add to Cart</a>
+          </button>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const frameButtons = document.querySelectorAll(".frame-button");
+          frameButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              const frame = this.getAttribute("data-frame");
+              loadThumbnailsForFrame(frame);
+              document.getElementById(
+                "main-image"
+              ).src = `canby-ACTV-img/${frame}/1.jpg`;
+              document.getElementById("main-image").alt = `${frame} Frame 1`;
+            });
+          });
+        });
+
+        function loadThumbnailsForFrame(frame) {
+          const thumbnailsContainer = document.getElementById("thumbnails");
+          thumbnailsContainer.innerHTML = "";
+          for (let i = 1; i <= 6; i++) {
+            const img = document.createElement("img");
+            img.src = `canby-ACTV-img/${frame}/${i}.jpg`;
+            img.alt = `${frame} Frame ${i}`;
+            img.onclick = function () {
+              document.getElementById("main-image").src = this.src;
+            };
+            thumbnailsContainer.appendChild(img);
+          }
+        }
+
+        loadThumbnailsForFrame("emerald");
+      </script>
+    </div>
+
+    <hr />
+
+    <div class="container" id="desc-detail">
+      <div class="product-description">
+        <h2>DESCRIPTION</h2>
+        <h1>Style Meets Performance</h1>
+        <p>
+          Engineered to endure all your active pursuits, the ACTV collection
+          blends classic shapes with performance sunglass features. Our no-slip,
+          no-fog, no-bounce design allows for unobtrusive sun protection whether
+          you're out running, cycling, climbing, or paddling. All-day comfort,
+          everyday style.
+        </p>
+        <ul>
+          <li>Ultra-thin 100% recycled nylon frame</li>
+          <li>7-layer anti-reflective coating with 100% UVA/UVB protection</li>
+          <li>Genuine wood inlays</li>
+          <li>Flexible rubberized temple tips</li>
+          <li>Face-locking rubberized nosepads</li>
+          <li>Polarized optics with water and smudge-resistant coating</li>
+          <li>Microfiber cleaning cloth</li>
+          <li>1-year warranty</li>
+        </ul>
+      </div>
+
+      <div class="fit-details">
+        <h2>FIT DETAILS</h2>
+        <h1>Overall Width: Wide</h1>
+        <h1>Gender: Unisex</h1>
+        <ul class="measurements">
+          <li>Lens: 54mm</li>
+          <li>Bridge: 19mm</li>
+          <li>Temple: 145mm</li>
+          <li>Overall Width: 144mm</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="container" id="product-review-section">
+      <h2>Customer Reviews</h2>
+      <div class="container2">
+        <div class="review">
+          <div class="reviewer-info">
+            <img src="reviews-img/a.png" alt="Reviewer Avatar" />
+            <div class="reviewer-details">
+              <h2>Asmodeus Dell</h2>
+              <p>Customer since 2018</p>
+            </div>
+          </div>
+          <div class="review-content">
+            <div class="rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <label for="modal-toggle-1" class="review-image-label">
+              <img
+                src="reviews-img/sheesh.png"
+                alt="Image Description"
+                class="review-image"
+              />
+            </label>
+            <p>
+              I liked the look of these sunglasses, so I ordered a pair. I am
+              very happy with the build quality and look. I like the polarized
+              lenses on these more than my Oakleys. Definitely ordering more!
+            </p>
+          </div>
+
+          <input type="checkbox" id="modal-toggle-1" class="modal-toggle" />
+          <div class="modal">
+            <label for="modal-toggle-1" class="close-btn">&times;</label>
+            <img
+              src="reviews-img/sheesh.png"
+              alt="Image Description"
+              class="modal-content"
+            />
+          </div>
+
+          <div class="reviewer-info">
+            <img src="reviews-img/L.png" alt="Reviewer Avatar" />
+            <div class="reviewer-details">
+              <h2>Lee Hye</h2>
+              <p>Customer since 2021</p>
+            </div>
+          </div>
+
+          <div class="review-content">
+            <div class="rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <label for="modal-toggle-2" class="review-image-label">
+              <img
+                src="reviews-img/comment.png"
+                alt="Image Description"
+                class="review-image"
+              />
+            </label>
+            <p>
+              I'm using an ordinary nearsighted lens in this frame. Orthodox yet
+              unique design. Beautiful handicrafts in every detail. Very good.
+            </p>
+          </div>
+
+          <input type="checkbox" id="modal-toggle-2" class="modal-toggle" />
+          <!-- Ensure this id is modal-toggle-2 -->
+          <div class="modal">
+            <label for="modal-toggle-2" class="close-btn">&times;</label>
+            <img
+              src="reviews-img/comment.png"
+              alt="Image Description"
+              class="modal-content"
+            />
+          </div>
+
+          <div class="reviewer-info">
+            <img src="reviews-img/J.png" alt="J" />
+            <div class="reviewer-details">
+              <h2>Jason Nord</h2>
+              <p>Customer since 2020</p>
+            </div>
+          </div>
+
+          <div class="review-content">
+            <div class="rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <label for="modal-toggle-3" class="review-image-label">
+              <img
+                src="reviews-img/dogy.png"
+                alt="Image Description"
+                class="review-image"
+              />
+            </label>
+            <p>
+              The color combo of these with the orange lenses is perfect! The
+              quality of the materials and the opportunity to support the
+              national parks is making me consider the Crag - Arches version
+              next!
+            </p>
+          </div>
+
+          <input type="checkbox" id="modal-toggle-3" class="modal-toggle" />
+          <div class="modal">
+            <label for="modal-toggle-3" class="close-btn">&times;</label>
+            <img
+              src="reviews-img/dogy.png"
+              alt="Image Description"
+              class="modal-content"
+            />
+          </div>
+
+          <div class="reviewer-info">
+            <img src="reviews-img/e.png" alt="Reviewer Avatar" />
+            <div class="reviewer-details">
+              <h2>Erika Collinger</h2>
+              <p>Customer since 2022</p>
+            </div>
+          </div>
+
+          <div class="review-content">
+            <div class="rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <label for="modal-toggle-4" class="review-image-label">
+              <img
+                src="reviews-img/lola.png"
+                alt="Image Description"
+                class="review-image"
+              />
+            </label>
+            <p>
+              The glasses are high quality, durable, fit nicely, and
+              fashionable. I only buy Shwood! Thanks for the great products!
+            </p>
+          </div>
+
+          <input type="checkbox" id="modal-toggle-4" class="modal-toggle" />
+          <div class="modal">
+            <label for="modal-toggle-4" class="close-btn">&times;</label>
+            <img
+              src="reviews-img/lola.png"
+              alt="Image Description"
+              class="modal-content"
+            />
+          </div>
+
+          <div class="reviewer-info">
+            <img src="reviews-img/m.png" alt="Reviewer Avatar" />
+            <div class="reviewer-details">
+              <h2>Mary Cooper</h2>
+              <p>Customer since 2019</p>
+            </div>
+          </div>
+
+          <div class="review-content">
+            <div class="rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <label for="modal-toggle-5" class="review-image-label">
+              <img
+                src="reviews-img/beach.png"
+                alt="Image Description"
+                class="review-image"
+              />
+            </label>
+            <p>
+              Dig these sunnies style and quality. I really like the lens color.
+            </p>
+          </div>
+
+          <input type="checkbox" id="modal-toggle-5" class="modal-toggle" />
+          <div class="modal">
+            <label for="modal-toggle-5" class="close-btn">&times;</label>
+            <img
+              src="reviews-img/beach.png"
+              alt="Image Description"
+              class="modal-content"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container" id="footer">
+        <div class="col" id="footer-review">
+          <a href="reviews.html">
+            <div id="footer-icons">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <h3>Read Reviews</h3>
+          </a>
+        </div>
+
+        <div class="col" id="footer-shipping">
+          <a href="">
+            <div id="footer-icons">
+              <i class="fa-solid fa-truck-fast" style="color: #ffffff"></i>
+            </div>
+            <h3>Free Shipping</h3>
+          </a>
+        </div>
+
+        <div class="col" id="footer-return">
+          <a href="">
+            <div id="footer-icons">
+              <i class="fa-solid fa-box" style="color: #ffffff"></i>
+            </div>
+            <h3>Free Returns</h3>
+          </a>
+        </div>
+
+        <div class="col" id="footer-near">
+          <a href="">
+            <div id="footer-icons">
+              <i class="fa-solid fa-location-dot" style="color: #ffffff"></i>
+            </div>
+            <h3>Retails Near You</h3>
+          </a>
+        </div>
+      </div>
+
+      <hr style="color: white; height: 5px" />
+
+      <div class="col" id="footer-buttom">
+        <div class="sidebar">
+          <div class="section">
+            <h3>ABOUT</h3>
+            <ul>
+              <li><a href="">Our Story</a></li>
+              <li><a href="">Our Process</a></li>
+            </ul>
+          </div>
+          <div class="section">
+            <h3>SUPPORT</h3>
+            <ul>
+              <li><a href="sign-up.html">My Account</a></li>
+              <li>Track My Order</li>
+              <li>Returns</li>
+              <li>Warranty</li>
+              <li>FAQ/Help</li>
+              <li>Wholesale</li>
+              <li>Affiliate Program</li>
+              <li>Military & First Responders</li>
+            </ul>
+          </div>
+          <div class="section">
+            <h3>CONNECT</h3>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/shwoodshop/">Instagram</a>
+              </li>
+              <li>
+                <a href="https://web.facebook.com/Shwoodshop/?_rdc=1&_rdr"
+                  >Facebook</a
+                >
+              </li>
+              <li><a href="https://vimeo.com/shwoodshop">Vimeo</a></li>
+              <li>
+                <a href="https://www.pinterest.ph/shwoodshop/">Pinterest</a>
+              </li>
+            </ul>
+          </div>
+          <div class="section">
+            <h3>CONTACT</h3>
+            <p>Customer Service:</p>
+            <p>(503) 367-9252</p>
+            <p>9–3 PST, Mon–Fri</p>
+            <p>729 SE Grant St</p>
+            <p>Portland OR 97214</p>
+            <p><a href="mailto:info@shwoodshop.com">info@shwoodshop.com</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+.image-container {
+  position: relative;
+  width: 100%; /* or any specific width */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto; /* Keeps the aspect ratio intact */
+  display: block; /* Removes bottom margin/gap */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Align center correctly */
+  color: white; /* Text color */
+  font-size: 40px; /* Text size */
+  font-weight: bold; 
+  text-align: center;
+}
+
+#product-section {
+  display: flex;
+}
+
+#product-section .row{
+  padding: 20px;
+}
+
+#wood-glasses-top-cover {
+  margin-bottom: 2rem;
+}
+
+#product-section .card {
+  margin-right: 4vw;
+  width: 27vw;
+  background-color: rgb(224, 224, 224);
+  box-shadow: 5px 5px 10px black;
+}
+
+#all-container {
+  width: 26.6vw;
+  height: 200px;
+  margin-left: -10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.product1-container {
+  background-image: url("wood-glasses-img/canbywood1.avif");
+}
+
+.product1-container:hover {
+  animation: product1Cycle 10s forwards infinite;
+}
+
+@keyframes product1Cycle {
+  0%, 4% { background-image: url("wood-glasses-img/canbywood1.avif"); }
+  5%, 28% { background-image: url("wood-glasses-img/canbywood2.avif"); }
+  29%, 52% { background-image: url("wood-glasses-img/canbywood3.avif"); }
+  53%, 76% { background-image: url("wood-glasses-img/canbywood4.avif"); }
+  77%, 100% { background-image: url("wood-glasses-img/canbywood5.avif"); }
+}
+
+.progress-bar {
+  width: 0%;
+  height: 5px;
+  background-color: black;
+  transition: width 0.25s linear; 
+}
+
+.product1-container:hover + .progress-bar,
+.product2-container:hover + .progress-bar,
+.product3-container:hover + .progress-bar,
+.product4-container:hover + .progress-bar,
+.product5-container:hover + .progress-bar,
+.product6-container:hover + .progress-bar{
+  animation: progressBarCycle 10s forwards infinite;
+}
+
+@keyframes progressBarCycle {
+  0% { width: 0%; }
+  4% { width: 4%; }
+  28% { width: 28%; }
+  52% { width: 52%; }
+  76% { width: 76%; }
+  100% { width: 100%; }
+}
+
+.product2-container {
+  background-image: url("wood-glasses-img/hamiltonwood1.avif");
+}
+
+.product2-container:hover {
+  animation: product2Cycle 10s forwards infinite;
+}
+
+@keyframes product2Cycle {
+  0%, 4% { background-image: url("wood-glasses-img/hamiltonwood1.avif"); }
+  5%, 28% { background-image: url("wood-glasses-img/hamiltonwood2.avif"); }
+  29%, 52% { background-image: url("wood-glasses-img/hamiltonwood3.avif"); }
+  53%, 76% { background-image: url("wood-glasses-img/hamiltonwood4.avif"); }
+  77%, 100% { background-image: url("wood-glasses-img/hamiltonwood5.avif"); }
+}
+
+.product3-container {
+  background-image: url("wood-glasses-img/hamiltonwood1.avif");
+}
+
+.product3-container:hover {
+  animation: product3Cycle 10s forwards infinite;
+}
+
+@keyframes product3Cycle {
+  0%, 4% { background-image: url("wood-glasses-img/hamiltonwood1.avif"); }
+  5%, 28% { background-image: url("wood-glasses-img/hamiltonwood2.avif"); }
+  29%, 52% { background-image: url("wood-glasses-img/hamiltonwood3.avif"); }
+  53%, 76% { background-image: url("wood-glasses-img/hamiltonwood4.avif"); }
+  77%, 100% { background-image: url("wood-glasses-img/hamiltonwood5.avif"); }
+}
+
+.product4-container {
+  background-image: url("wood-glasses-img/hamiltonwood1.avif");
+}
+
+.product4-container:hover {
+  animation: product4Cycle 10s forwards infinite;
+}
+
+@keyframes product4Cycle {
+  0%, 4% { background-image: url("wood-glasses-img/hamiltonwood1.avif"); }
+  5%, 28% { background-image: url("wood-glasses-img/hamiltonwood2.avif"); }
+  29%, 52% { background-image: url("wood-glasses-img/hamiltonwood3.avif"); }
+  53%, 76% { background-image: url("wood-glasses-img/hamiltonwood4.avif"); }
+  77%, 100% { background-image: url("wood-glasses-img/hamiltonwood5.avif"); }
+}
+
+.product5-container {
+  background-image: url("wood-glasses-img/hamiltonwood1.avif");
+}
+
+.product5-container:hover {
+  animation: product5Cycle 10s forwards infinite;
+}
+
+@keyframes product5Cycle {
+  0%, 4% { background-image: url("wood-glasses-img/hamiltonwood1.avif"); }
+  5%, 28% { background-image: url("wood-glasses-img/hamiltonwood2.avif"); }
+  29%, 52% { background-image: url("wood-glasses-img/hamiltonwood3.avif"); }
+  53%, 76% { background-image: url("wood-glasses-img/hamiltonwood4.avif"); }
+  77%, 100% { background-image: url("wood-glasses-img/hamiltonwood5.avif"); }
+}
+
+.product6-container {
+  background-image: url("wood-glasses-img/hamiltonwood1.avif");
+}
+
+.product6-container:hover {
+  animation: product6Cycle 10s forwards infinite;
+}
+
+@keyframes product6Cycle {
+  0%, 4% { background-image: url("wood-glasses-img/hamiltonwood1.avif"); }
+  5%, 28% { background-image: url("wood-glasses-img/hamiltonwood2.avif"); }
+  29%, 52% { background-image: url("wood-glasses-img/hamiltonwood3.avif"); }
+  53%, 76% { background-image: url("wood-glasses-img/hamiltonwood4.avif"); }
+  77%, 100% { background-image: url("wood-glasses-img/hamiltonwood5.avif"); }
+}
+
+
+
+
+
+
+
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}

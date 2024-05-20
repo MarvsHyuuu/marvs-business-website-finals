@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Review Page</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="review.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="Home-img/shwood-logo.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Sunglasses.html">Sunglasses</a>
+                      </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Collection
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="Sunglasses.html">Collection</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="ACTV-performace.html">ACTV Performance</a></li>
+                      <li><a class="dropdown-item" href="acetate-originals.html">Acetate</a></li>
+                      <li><a class="dropdown-item" href="wood-glasses.html">Wood</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="our_story.html">Our Story</a></li>
+                      <li><a class="dropdown-item" href="our_process.html">Our Process</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <div class="container" id="review-page">
+        <h1>Customer Reviews</h1>
+        <div class="review">
+            <div class="reviewer-info">
+                <img src="reviews-img/a.png" alt="Reviewer Avatar">
+                <div class="reviewer-details">
+                    <h2>Asmodeus Dell</h2>
+                    <p>Customer since 2018</p>
+                </div>
+            </div>
+            <div class="review-content">
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <label for="modal-toggle-1" class="review-image-label">
+                    <img src="reviews-img/sheesh.png" alt="Image Description" class="review-image">
+                </label>
+                <p> I liked the look of these sunglasses, so I ordered a pair. I am very happy with the build quality and look. I like the polarized lenses on these more than my Oakleys. Definitely ordering more!</p>
+            </div>
+            
+            <input type="checkbox" id="modal-toggle-1" class="modal-toggle">
+            <div class="modal">
+                <label for="modal-toggle-1" class="close-btn">&times;</label>
+                <img src="reviews-img/sheesh.png" alt="Image Description" class="modal-content">
+            </div>
+
+            <div class="reviewer-info">
+                <img src="reviews-img/L.png" alt="Reviewer Avatar">
+                <div class="reviewer-details">
+                    <h2>Lee Hye</h2>
+                    <p>Customer since 2021</p>
+                </div>
+            </div>
+
+            <div class="review-content">
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <label for="modal-toggle-2" class="review-image-label">
+                    <img src="reviews-img/comment.png" alt="Image Description" class="review-image">
+                </label>
+                <p>I'm using an ordinary nearsighted lens in this frame. Orthodox yet unique design. Beautiful handicrafts in every detail. Very good.</p>
+            </div>
+            
+            <input type="checkbox" id="modal-toggle-2" class="modal-toggle"> <!-- Ensure this id is modal-toggle-2 -->
+<div class="modal">
+    <label for="modal-toggle-2" class="close-btn">&times;</label>
+    <img src="reviews-img/comment.png" alt="Image Description" class="modal-content">
+</div>
+
+            <div class="reviewer-info">
+                <img src="reviews-img/J.png" alt="J">
+                <div class="reviewer-details">
+                    <h2>Jason Nord</h2>
+                    <p>Customer since 2020</p>
+                </div>
+            </div>
+
+            <div class="review-content">
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <label for="modal-toggle-3" class="review-image-label">
+                    <img src="reviews-img/dogy.png" alt="Image Description" class="review-image">
+                </label>
+                <p>The color combo of these with the orange lenses is perfect! The quality of the materials and the opportunity to support the national parks is making me consider the Crag - Arches version next!</p>
+            </div>
+            
+            <input type="checkbox" id="modal-toggle-3" class="modal-toggle">
+            <div class="modal">
+                <label for="modal-toggle-3" class="close-btn">&times;</label>
+                <img src="reviews-img/dogy.png" alt="Image Description" class="modal-content">
+            </div>
+
+             <div class="reviewer-info">
+                <img src="reviews-img/e.png" alt="Reviewer Avatar">
+                <div class="reviewer-details">
+                    <h2>Erika Collinger</h2>
+                    <p>Customer since 2022</p>
+                </div>
+            </div>
+
+            <div class="review-content">
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <label for="modal-toggle-4" class="review-image-label">
+                    <img src="reviews-img/lola.png" alt="Image Description" class="review-image">
+                </label>
+                <p>The glasses are high quality, durable, fit nicely, and fashionable. I only buy Shwood! Thanks for the great products!</p>
+            </div>
+            
+            <input type="checkbox" id="modal-toggle-4" class="modal-toggle">
+            <div class="modal">
+                <label for="modal-toggle-4" class="close-btn">&times;</label>
+                <img src="reviews-img/lola.png" alt="Image Description" class="modal-content">
+            </div>
+            
+            <div class="reviewer-info">
+                <img src="reviews-img/m.png" alt="Reviewer Avatar">
+                <div class="reviewer-details">
+                    <h2>Mary Cooper</h2>
+                    <p>Customer since 2019</p>
+                </div>
+            </div>
+
+            <div class="review-content">
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <label for="modal-toggle-5" class="review-image-label">
+                    <img src="reviews-img/beach.png" alt="Image Description" class="review-image">
+                </label>
+                <p>Dig these sunnies style and quality. I really like the lens color.</p>
+            </div>
+            
+            <input type="checkbox" id="modal-toggle-5" class="modal-toggle">
+            <div class="modal">
+                <label for="modal-toggle-5" class="close-btn">&times;</label>
+                <img src="reviews-img/beach.png" alt="Image Description" class="modal-content">
+            </div>
+    </div>
+      </div>
+    </div>
+
+</body>
+</html>
